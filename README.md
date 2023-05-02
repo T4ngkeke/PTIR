@@ -11,34 +11,4 @@ Pour Bitcoin, les mineurs trouvent le «nonce» d'une fonction de hachage qui co
 on va comparer leur probabilité. 
 # selfish mining
 +des différentes valeurs de puissance de calcul de chaîne publique et la chaîne privée. À quel seuil, «selfish mining» est la méthode la plus rentable? 
-pseudocode:
 
-on Init
-  public chain ← publicly known blocks
-  private chain ← publicly known blocks
-  privateBranchLen ← 0
-  Mine at the head of the private chain.
-  
-on My pool found a block
-  ∆prev ← length(private chain) − length(public chain)
-  append new block to private chain
-  privateBranchLen ← privateBranchLen + 1
-  if ∆prev = 0 and privateBranchLen = 2 then            (Was tie with branch of 1)
-    publish all of the private chain                    (Pool wins due to the lead of 1)
-    privateBranchLen ← 0
-    Mine at the new head of the private chain.
-    
-on Others found a block
-  ∆prev ← length(private chain) − length(public chain)
-  append new block to public chain
-  if ∆prev = 0 then                             (they win)
-    private chain ← public chain
-    privateBranchLen ← 0
-  else if ∆prev = 1 then
-    publish last block of the private chain         (Now same length. Try our luck)
-  else if ∆prev = 2 then
-    publish all of the private chain                  (Pool wins due to the lead of 1)
-    privateBranchLen ← 0 
-  else
-    publish first unpublished block in private block.       (∆prev > 2)
-Mine at the head of the private chain.
