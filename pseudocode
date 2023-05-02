@@ -30,7 +30,7 @@ on Others found a block
     publish first unpublished block in private block.       (∆prev > 2)
 Mine at the head of the private chain.
 
-
+source de thèse: https://arxiv.org/pdf/1311.0243.pdf
 
 Dans cette modèle, on considère qu'il y a 2 variables qui influence notre résultat: la puissance de calcul de
 ma chaîne privée et la «luck» de 25ème ligne(quand la chaîne privée et la chaîne publique ont la même longueur, 
