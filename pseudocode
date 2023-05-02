@@ -34,4 +34,5 @@ Mine at the head of the private chain.
 
 Dans cette modèle, on considère qu'il y a 2 variables qui influence notre résultat: la puissance de calcul de
 ma chaîne privée et la «luck» de 25ème ligne(quand la chaîne privée et la chaîne publique ont la même longueur, 
-on fait une course d'annonce. On peut quantifier cette probabilité.)
+on fait une course d'annonce. On peut quantifier cette probabilité.) 
+À la fin, on compare notre résultat honnête et le résultat frauduleux. À quel seuil qu'il est mieux de tricher pour les deux variables? ? 
